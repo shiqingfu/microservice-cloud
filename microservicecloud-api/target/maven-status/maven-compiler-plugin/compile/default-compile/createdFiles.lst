@@ -1,0 +1,9 @@
+com\sunflower\springcloud\service\DeptClientService.class
+com\sunflower\springcloud\entities\DeptExample$Criteria.class
+com\sunflower\springcloud\entities\DeptExample.class
+com\sunflower\springcloud\entities\DeptExample$GeneratedCriteria.class
+com\sunflower\springcloud\entities\Dept$DeptBuilder.class
+com\sunflower\springcloud\entities\DeptExample$Criterion.class
+com\sunflower\springcloud\service\DeptClientServiceFallbackFactory$1.class
+com\sunflower\springcloud\entities\Dept.class
+com\sunflower\springcloud\service\DeptClientServiceFallbackFactory.class

@@ -1,0 +1,47 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: microservicecloud-dept
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/clouddb01?characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+mybatis:
+  type-aliases-package: com.sunflower.springcloud.entities
+  mapper-locations: classpath:mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001-hystrix
+    prefer-ip-address: true  #访问显示微服务的ip地址
+
+#监控信息
+info:
+  app.name: sunflower-microservicecloud
+  company.name: www.sunflower.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+swagger:
+  basePackage: com.sunflower.springcloud
+  title: "springcloud"
+  description: "microservicecloud-provider-dept-8001"
+  contactName: "微服务提供者"
+
+
+
